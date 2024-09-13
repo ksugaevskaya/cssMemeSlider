@@ -47,11 +47,16 @@ body {
   background-color: red;
 }
 
-.active {
+.none:checked + label {
   border-color: aqua;
   border-style: solid;
   border-width: 0.3rem;
 }
+
+.none {
+  display: none;
+}
+
 @media (max-width: 500px) {
   .adjust-one {
     display: flex;
