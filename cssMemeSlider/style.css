@@ -1,0 +1,219 @@
+body {
+  background-color: #25282a;
+}
+
+.meme-one {
+  width: 100%;
+  margin-bottom: 3%;
+}
+
+.main-adjust {
+  display: flex;
+  flex-direction: column-reverse;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 3%;
+  padding-bottom: 7%;
+}
+
+.meme-text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: normal;
+  color: white;
+}
+.meme-text-one {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: normal;
+  color: white;
+}
+
+.meme-text-only {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  max-height: 2.5rem;
+}
+
+@media (max-width: 852px) {
+  .meme-text-only {
+    max-height: 2rem;
+  }
+}
+
+@media (max-width: 660px) {
+  .meme-text-only {
+    max-height: 1.3rem;
+  }
+}
+
+@media (max-width: 852px) {
+  .meme-text {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 660px) {
+  .meme-text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 852px) {
+  .meme-text-one {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 660px) {
+  .meme-text-one {
+    font-size: 1rem;
+  }
+}
+.meme-dots-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+@media (max-width: 880px) {
+  .meme-dots-container {
+    gap: 0rem;
+  }
+}
+
+@media (max-width: 660px) {
+  .meme-dots-container {
+    gap: 0rem;
+  }
+}
+.meme-dots {
+  background-color: white;
+  width: 1.8rem;
+  height: 1.8rem;
+  margin-left: 0.2 rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.meme-dots:hover {
+  background-color: rgb(249, 157, 91);
+}
+
+#radio1:checked ~ .new-div .meme-dots:nth-of-type(1),
+#radio2:checked ~ .new-div .meme-dots:nth-of-type(2),
+#radio3:checked ~ .new-div .meme-dots:nth-of-type(3),
+#radio4:checked ~ .new-div .meme-dots:nth-of-type(4) {
+  border-color: white;
+  border-style: solid;
+  background-color: transparent;
+  transition: none;
+}
+
+.none {
+  display: none;
+}
+
+@media (max-width: 550px) {
+  .adjust-one {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+@media (max-width: 550px) {
+  .meme-dots-container {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media (max-width: 880px) {
+  .meme-dots {
+    width: 1rem;
+    height: 1rem;
+    margin-left: 0.5rem;
+    border-radius: 1rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 660px) {
+  .meme-dots {
+    width: 0.8rem;
+    height: 0.8rem;
+    margin-left: 0.5rem;
+    border-radius: 1rem;
+    margin-bottom: 0.5rem;
+  }
+}
+.slider {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+#radio1:checked ~ .slider .meme-one:nth-of-type(1) {
+  transform: translateX(0%);
+  transition: all 0.3s ease-in-out;
+}
+#radio2:checked ~ .slider .meme-one:nth-of-type(2) {
+  transform: translateX(-100%);
+  transition: all 0.3s ease-in-out;
+}
+#radio3:checked ~ .slider .meme-one:nth-of-type(3) {
+  transform: translateX(-200%);
+  transition: all 0.3s ease-in-out;
+}
+#radio4:checked ~ .slider .meme-one:nth-of-type(4) {
+  transform: translateX(-300%);
+  transition: all 0.3s ease-in-out;
+}
+
+.new-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@media (max-width: 550px) {
+  .new-div {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+#radio1:checked ~ .new-div .meme-text-only .meme-text:nth-of-type(1) {
+  transform: translateY(0%);
+  transition: all 0.3s ease-in-out;
+}
+#radio2:checked ~ .new-div .meme-text-only .meme-text-one:nth-of-type(2) {
+  transform: translateY(-100%);
+  transition: all 0.3s ease-in-out;
+}
+#radio3:checked ~ .new-div .meme-text-only .meme-text-one:nth-of-type(3) {
+  transform: translateY(-200%);
+  transition: all 0.3s ease-in-out;
+}
+#radio4:checked ~ .new-div .meme-text-only .meme-text-one:nth-of-type(4) {
+  transform: translateY(-300%);
+  transition: all 0.3s ease-in-out;
+}
+
+#radio2:checked ~ .new-div .meme-text-only .meme-text:nth-of-type(1),
+#radio3:checked ~ .new-div .meme-text-only .meme-text:nth-of-type(1),
+#radio4:checked ~ .new-div .meme-text-only .meme-text:nth-of-type(1) {
+  opacity: 0;
+}
+
+.enhanced-click-area {
+  padding: 1.2rem;
+}
+
+@media (max-width: 880px) {
+  .enhanced-click-area {
+    padding: 0.8rem;
+  }
+}
